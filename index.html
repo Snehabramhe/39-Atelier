@@ -377,7 +377,7 @@
                     class="form-control h-auto"
                   ></textarea>
                 </div>
-                <button type="submit" class="btn-block-full">Submit</button>
+                <button type="submit" class="btn-block-full" onclick="submitForm()">Submit</button>
               </form>
             </div>
           </div>
@@ -473,8 +473,53 @@
         modal.style.display = "none";
       }
 
-      document.addEventListener("DOMContentLoaded", function () {
-        emailjs.init("5sA71Sok179SXMxG0"); // Replace with your EmailJS Public Key
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   emailjs.init("5sA71Sok179SXMxG0"); // Replace with your EmailJS Public Key
+      //   console.log("init");
+      //   document
+      //     .getElementById("contact-form")
+      //     .addEventListener("submit", function (event) {
+      //       event.preventDefault();
+      //       console.log("submit pressed");
+
+      //       let name = document.getElementById("name").value;
+      //       let email = document.getElementById("email").value;
+      //       let mobile = document.getElementById("mobile").value;
+      //       let comments = document.getElementById("comments").value;
+
+      //       let templateParams = {
+      //         name: name,
+      //         email: email,
+      //         mobile: mobile,
+      //         comments: comments,
+      //       };
+
+      //       emailjs
+      //         .send(
+      //           "service_7wb92d6",
+      //           "template_gw3qi9k",
+      //           {
+      //             name: document.getElementById("name").value,
+      //             email: document.getElementById("email").value,
+      //             mobile: document.getElementById("mobile").value,
+      //             comments: document.getElementById("comments").value,
+      //           },
+      //           "5sA71Sok179SXMxG0"
+      //         )
+      //         .then((response) => {
+      //           console.log("Email sent successfully!", response);
+      //         })
+      //         .catch((error) => {
+      //           console.error("Email sending failed:", error);
+      //         });
+
+      //       // Clear form after sending
+      //       document.getElementById("contact-form").reset();
+      //     });
+      // });
+
+            function submitForm() {
+              emailjs.init("5sA71Sok179SXMxG0"); // Replace with your EmailJS Public Key
         console.log("init");
         document
           .getElementById("contact-form")
@@ -515,8 +560,8 @@
 
             // Clear form after sending
             document.getElementById("contact-form").reset();
-          });
-      });
+            }
+          )}
     </script>
   </body>
 </html>
