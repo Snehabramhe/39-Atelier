@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>39 Atelier</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff0000" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+
+  <body>
+    <section class="main-bg">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top header-navbar">
+        <div class="container">
+          <a class="navbar-brand p-0" href="#">
+            <img src="images/Logo.png" class="img-fluid logo-img" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-md-auto gap-2">
+              <li class="nav-item rounded">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item rounded">
+                <a class="nav-link" href="#about-founder">About The Founder</a>
+              </li>
+              <li class="nav-item rounded">
+                <a class="nav-link" href="#services">Our Services</a>
+              </li>
+              <li class="nav-item rounded">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item rounded">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="overlay">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <h1>Creating a lifestyle, the<br />minimalist way!</h1>
+            </div>
+            <!--
+                    <p>Our muse, moodboard and inspiration is always the client. We believe in creating a home around your personality. <br>
+
+                        The interior should be designed to reveal who you are or create a haven to enable who you aspire to be!
+
+                        A home is created around your personality and lifestyle and not the other way round!
+                    </p>
+-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ourstory">
+      <div class="container h-100">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h4 data-aos="fade-up" class="small-heading">Who we are.</h4>
+            <h2 class="heading-sec" data-aos="fade-up">
+              Our <span> Story </span>
+            </h2>
+
+            <p data-aos="fade-up">
+              Welcome to 39 Atelier, where we specialize in crafting
+              personalized interior design solutions to suit your unique style
+              and needs. We offer a comprehensive range of services tailored to
+              transform your spaces into functional, aesthetically pleasing
+              environments.
+            </p>
+            <!--            <p>Our dedicated team of experienced interior designers is committed to understanding your unique vision, style, and requirements. With a keen eye for detail and a passion for creating beautiful, functional spaces, we guide our clients through every stage of the design process. Whether you seek a complete overhaul, renovation assistance, or design advice for a single room, our services are crafted to meet your individual needs and bring your design aspirations to life.</p>-->
+          </div>
+          <div class="col-md-5 offset-md-1">
+            <img
+              data-aos="fade-up"
+              src="http://ollis.like-themes.com/wp-content/uploads/2018/02/main_ABOUT_BIG.jpg"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about-founder" class="aboutme">
+      <div class="container h-100">
+        <div class="row align-items-center justify-content-center shadowbox">
+          <div class="col-md-6">
+            <h3 data-aos="fade-up">Prasuna Reddy</h3>
+            <h6 data-aos="fade-up">Interior Designer</h6>
+            <p data-aos="fade-up">
+              Prasuna Reddy is a passionate designer whose motherly instincts
+              inspire her to design spaces with a sense of thoughtfulness,
+              security and functionality. Inspired by her client’s lifestyle she
+              believes creating designs that work around them while catering to
+              their aspirations.
+            </p>
+          </div>
+          <div class="col-md-4 offset-md-1">
+            <img
+              src="./images/Prasuna-Reddy-Founder.jpeg"
+              class="img-fluid"
+              data-aos="fade-up"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <div class="row service-heading align-items-center h-100">
+          <div class="col-md-5">
+            <h4 data-aos="fade-up" class="small-heading">What we do.</h4>
+            <h2 class="heading-main" data-aos="fade-up">
+              Passion Fueled Interior <span>Services</span>.
+            </h2>
+          </div>
+          <!-- <div class="col-md-7">
+                    <p>
+                        It has survived not only five centuries. When an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div> -->
+        </div>
+        <div class="col-md-12">&nbsp;</div>
+        <div class="row justify-content-center">
+          <!-- Image Modal -->
+          <div id="imageModal" class="modal" style="display: none">
+            <span class="close" onclick="closeModal()">X</span>
+            <img class="modal-content" id="modalImg" />
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Consultantion-Services.jpg"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Consultantion-Services.jpg')"
+              />
+              <h4>Consultation Services</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Space-Planning.webp"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Space-Planning.webp')"
+              />
+              <h4>Space Planning</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Concept-Developement.jpg"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Concept-Developement.jpg')"
+              />
+              <h4>Concept Development</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Material-Finish-Selection.jpg"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Material-Finish-Selection.jpg')"
+              />
+              <h4>Material and Finish Selection</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Furniture-Selection-Customization.jpg"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Furniture-Selection-Customization.jpg')"
+              />
+              <h4>Furniture Selection and Customization</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Lightining-Design.jpg"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Lightining-Design.jpg')"
+              />
+              <h4>Lighting Design</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Color-Coordination.jpg"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Color-Coordination.jpg')"
+              />
+              <h4>Color Coordination</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Project-Management.jpg"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Project-Management.jpg')"
+              />
+              <h4>Project Management</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/Styling-Decoratives.webp"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/Styling-Decoratives.webp')"
+              />
+              <h4>Styling and Decorative Elements</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="embed-responsive embed-responsive-16by9 service-box"
+              data-aos="fade-up"
+            >
+              <video
+                id="thumbnail"
+                class="embed-responsive-tem zoom-img video-fluid"
+                width="300"
+                controls
+                onclick="openVideoModal('./videos/12.mp4')"
+              >
+                <source src="./videos/12.mp4" type="video/mp4" />
+              </video>
+              <h4>Walk in video</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-box" data-aos="fade-up">
+              <img
+                src="./images/3D-Virtual-Design-Services.webp"
+                class="img-fluid zoom-img"
+                onclick="openModal('./images/3D-Virtual-Design-Services.webp')"
+              />
+              <h4>3D Virtual Design Services</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="highlight-section">
+      <div class="overlay">
+        <div class="container">
+          <h3>
+            Our muse, moodboard and inspiration is always the client. We believe
+            in creating a home around your personality.
+          </h3>
+        </div>
+      </div>
+    </section>
+    <section class="recent-projects" id="projects">
+      <div class="container">
+        <h2 class="text-center heading-sec" data-aos="fade-up">
+          <span>Projects</span>
+        </h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-box" data-aos="fade-up">
+              <!-- <img data-aos="fade-up" class="img-fluid w-100" src="https://www.demo.themicart.com/interico-wp/wp-content/uploads/2018/05/service-1.jpg"> -->
+              <video
+                id="thumbnail"
+                class="embed-responsive-tem zoom-img video-fluid w-100 h-100"
+                controls
+                onclick="openVideoModal('./videos/14.mp4')"
+              >
+                <source src="./videos/14.mp4" type="video/mp4" />
+              </video>
+              <h4 data-aos="fade-up">Home Interiors</h4>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-box" data-aos="fade-up">
+              <!-- <img data-aos="fade-up" class="img-fluid w-100" src="https://www.demo.themicart.com/interico-wp/wp-content/uploads/2018/05/service-2.jpg"> -->
+              <video
+                id="thumbnail"
+                class="embed-responsive-tem zoom-img video-fluid w-100 h-100"
+                controls
+                onclick="openVideoModal('./videos/15.mp4')"
+              >
+                <source src="./videos/15.mp4" type="video/mp4" />
+              </video>
+              <h4 data-aos="fade-up">Ironing Guru Store</h4>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-box" data-aos="fade-up">
+              <!-- <img data-aos="fade-up" class="img-fluid w-100" src="https://www.demo.themicart.com/interico-wp/wp-content/uploads/2018/05/service-3.jpg"> -->
+              <video
+                id="thumbnail"
+                class="embed-responsive-tem zoom-img video-fluid w-100 h-100"
+                controls
+                onclick="openVideoModal('./videos/16.mp4')"
+              >
+                <source src="./videos/16.mp4" type="video/mp4" />
+              </video>
+              <h4 data-aos="fade-up">Office Interiors</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+
+    <div class="clearfix"></div>
+    <section id="contact">
+      <div class="container">
+        <div class="row g-0 h-100 align-items-center shadowbg">
+          <div class="col-md-7">
+            <div class="bg-contact"></div>
+          </div>
+          <div class="col-md-5">
+            <div class="formdesign">
+              <h4>Leave us your info.</h4>
+              <p>We will get back to you.</p>
+
+              <form id="contact-form">
+                <div class="form-group">
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    id="email"
+                    type="text"
+                    placeholder="Email"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    id="mobile"
+                    type="text"
+                    placeholder="Mobile Number"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="comments"
+                    rows="4"
+                    placeholder="Comments"
+                    class="form-control h-auto"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-block-full">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal" style="display: none">
+      <span class="close" id="closeButton" onclick="closeVideoModal()">X</span>
+      <div class="modal-content">
+        <video id="modalVideo" width="100%" controls>
+          <source src="./videos/14.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <h4>Quick Links</h4>
+            <ul class="footer-links" style="margin-top: 30px">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about-founder">About The Founder</a></li>
+              <li><a href="#services">Our Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        //  alert(bottom);
+        if (scroll >= 80) {
+          $(".header-navbar").addClass("navbar-fixed-header ");
+        } else {
+          $(".header-navbar").removeClass("navbar-fixed-header ");
+        }
+      });
+      AOS.init();
+
+      $("a[href*=#]").click(function (event) {
+        $("html, body").animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top,
+          },
+          500
+        );
+        event.preventDefault();
+      });
+
+      function openModal(imageSrc) {
+        document.getElementById("imageModal").style.display = "flex";
+        document.getElementById("modalImg").src = imageSrc;
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+
+      function openVideoModal(videoSrc) {
+        var modal = document.getElementById("videoModal");
+        var video = document.getElementById("modalVideo");
+
+        // Set the video source
+        video.setAttribute("src", videoSrc);
+        video.load(); // Reload video to ensure the source updates
+        video.play(); // Play the video automatically
+
+        // Show the modal
+        modal.style.display = "flex";
+      }
+
+      function closeVideoModal() {
+        var modal = document.getElementById("videoModal");
+        var video = document.getElementById("modalVideo");
+
+        // Pause the video and reset the source
+        video.pause();
+        video.currentTime = 0; // Reset the video to the start
+        video.removeAttribute("src"); // Clear the source (optional but good practice)
+
+        // Hide the modal
+        modal.style.display = "none";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("5sA71Sok179SXMxG0"); // Replace with your EmailJS Public Key
+        console.log("init");
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log("submit pressed");
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let comments = document.getElementById("comments").value;
+
+            let templateParams = {
+              name: name,
+              email: email,
+              mobile: mobile,
+              comments: comments,
+            };
+
+            emailjs
+              .send(
+                "service_7wb92d6",
+                "template_gw3qi9k",
+                {
+                  name: document.getElementById("name").value,
+                  email: document.getElementById("email").value,
+                  mobile: document.getElementById("mobile").value,
+                  comments: document.getElementById("comments").value,
+                },
+                "5sA71Sok179SXMxG0"
+              )
+              .then((response) => {
+                console.log("Email sent successfully!", response);
+              })
+              .catch((error) => {
+                console.error("Email sending failed:", error);
+              });
+
+            // Clear form after sending
+            document.getElementById("contact-form").reset();
+          });
+      });
+    </script>
+  </body>
+</html>

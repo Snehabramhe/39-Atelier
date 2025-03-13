@@ -1,0 +1,434 @@
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Roboto+Slab:wght@200;400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&display=swap');
+
+  :root {
+      --main: #195b97;
+      --second: #ecb30a;
+      --menu-bg: #111c43;
+      --lite-bg: #f5f6f7;
+      --black: #000;
+      --text-color: #7A7A7A;
+      --menu-prime-color: #a3aed1;
+      --heading-family: 'Josefin Sans', sans-serif;
+      --body-family: 'Nunito Sans', sans-serif;
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+  }
+
+  html,
+  body {
+      height: 100%;
+      width: 100%;
+      color: var(--text-color);
+      font-family: var(--body-family);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+      font-family: var(--heading-family);
+      color: var(--black);
+  }
+
+  /******** TYPOGRAPHY *********/
+  section {
+      padding: 2rem;
+  }
+
+  .heading-sec {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      color: #000;
+  }
+
+  .heading-sec span,
+  .heading-main span {
+      color: var(--main) !important;
+  }
+
+  .heading-main {
+      font-size: 3rem;
+      font-weight: 800;
+  }
+
+  .small-heading {
+      color: #666;
+  }
+
+  .dark-backbg {
+      background: #f1f2f3;
+  }
+
+  /******** HEADER *********/
+
+  .logo-img {
+      height: 50px;
+  }
+
+  .navbar {
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+  }
+
+  .navbar-fixed-header {
+      background: #fff;
+      -webkit-box-shadow: 0px 10px 20px 0px rgb(8 0 42 / 8%);
+      -moz-box-shadow: 0px 10px 20px 0px rgba(8, 0, 42, 0.08);
+      box-shadow: 0px 10px 20px 0px rgb(8 0 42 / 8%);
+  }
+
+  .nav-link {
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+      color: #fff;
+      font-family: var(--heading-family);
+  }
+
+  .navbar-fixed-header .nav-link {
+      color: #000;
+  }
+
+  /******** MAIN BANNER *********/
+  .main-bg {
+      background-image: url('../images/Home-banner.jpeg');
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      position: relative;
+  }
+
+  .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #12121269;
+  }
+
+  .main-bg h1 {
+      color: #fff;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .main-bg p {
+      color: #fff;
+      font-size: 1.125rem;
+      text-align: justify;
+
+  }
+
+  .ourstory {
+      background-image: url(https://www.demo.themicart.com/interico-wp/wp-content/uploads/2018/05/bg-5.png);
+      width: 100%;
+      background-attachment: fixed;
+      background-position: center;
+  }
+
+  .aboutme h3 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+  }
+
+  .aboutme h6 {
+      text-align: end;
+      font-size: 1.25rem;
+      margin: 1rem 0;
+  }
+
+  .aboutme p {
+      text-align: justify;
+      line-height: 24px;
+  }
+
+  .aboutme {
+      background: #195b97e8;
+  }
+
+  @media (max-width: 320px) {
+    .aboutme h3 {
+        font-size: 2rem; /* Reduce font size for small screens */
+    }
+
+    .aboutme h6 {
+        font-size: 1rem; /* Reduce font size */
+        margin-top: 0.5rem;
+    }
+
+    .aboutme p {
+        font-size: 0.9rem; /* Slightly smaller text for readability */
+        text-align: justify;
+        line-height: 22px;
+    }
+}
+
+
+  .shadowbox {
+      background: #fff;
+      margin: 2rem 0;
+      padding: 2rem;
+  }
+
+  /******** SERVICES SECTION *********/
+  .service-box {
+      background: #f5f6f7;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.07);
+      margin-bottom: 2rem;
+      text-align: center;
+  }
+  .service-box:hover{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+  }
+
+  .service-box p {
+      padding: 0 0.5rem;
+      font-size: 0.9rem;
+      text-align: justify;
+  }
+
+  .service-box img {
+      height: 80px;
+      display: block;
+      margin: 1rem auto;
+  }
+
+  .service-box h4 {
+      font-size: 1.125rem;
+      margin: 0.5rem 0.5rem 0;
+      font-weight: 600;
+  }
+
+  /******** BLOG SECTION *********/
+  .blog-box {
+      background: #fff;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
+      margin-bottom: 1.5rem;
+  }
+
+  .blog-box img {
+      height: 230px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+  }
+
+  .blog-descp h3 {
+      font-size: 1.25rem;
+      line-height: 24px;
+  }
+
+  /******** HIGHLIGHT SECTION *********/
+  .highlight-section {
+      background-image: url('https://entre.qodeinteractive.com/wp-content/uploads/2018/01/about-us-background-img-1.jpg');
+      height: 400px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+  }
+
+  .highlight-section h3 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+      line-height: 60px;
+  }
+ /******** RECENT SECTION *********/
+.recent-projects{
+}
+.project-box{
+     margin-bottom: 2rem;
+    background: #f5f6f7;
+    height: 100%;
+    border: 2px solid #eee;
+}
+.project-box img{
+margin-bottom: 1rem;
+}
+.project-box h4{
+margin-bottom: 1rem;
+    text-align: center;
+}
+.bg-contact{
+        background-image: url(https://www.demo.themicart.com/interico-wp/wp-content/uploads/2018/05/services-img-11.jpg);
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+}
+.shadowbg{
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
+    background: #fff;
+}
+.formdesign{
+    padding: 1.5rem;
+}
+.formdesign h4{
+        text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.formdesign p{
+        text-align: center !important;
+}
+.form-group{
+    margin-bottom: 1rem;
+}
+.form-control {
+    border-radius: 0px;
+    border: 2px solid #eee;
+    height: 50px;
+}
+.btn-block-full{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    border: none;
+    background: var(--main);
+    color: #fff;
+}
+
+footer{
+    background: #222;
+    padding: 2rem;
+    text-align: center;
+}
+footer h4{
+    color: #fff;
+}
+footer p{
+    color: #fff;
+    text-align: justify;
+    font-size: 0.9rem;
+    line-height: 24px;
+}
+
+/* Default: Mobile View (320px - 425px) */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 0;
+}
+
+.footer-links li {
+    /* width: 100%;  */
+    text-align: center;
+    margin: 8px 0;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #f1f2f3;
+}
+
+.footer-links li a:hover {
+    color: gray;
+}
+
+
+/* Tablet & Desktop View (426px - 1440px) */
+@media (min-width: 426px) {
+    .footer-links {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around; 
+        flex-wrap: wrap; 
+    }
+    
+    .footer-links li {
+        flex: none;
+        margin: 0 10px; 
+        width: auto;
+    }
+}
+
+/* Hover Zoom Effect */
+.zoom-img {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.zoom-img:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 25%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.close {
+    position: absolute;
+    top: 90px;
+    right: 270px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.video-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Default font size for larger screens */
+.highlight-section h3 {
+    font-size: 2rem; 
+    text-align: center;
+    color: white;
+}
+
+/* Adjust font size for smaller screens */
+@media (max-width: 768px) {
+    .highlight-section h3 {
+        font-size: 1.5rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-section h3 {
+        font-size: 1.5rem;
+    }
+}
