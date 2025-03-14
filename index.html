@@ -96,7 +96,7 @@
           <div class="col-md-5 offset-md-1">
             <img
               data-aos="fade-up"
-              src="http://ollis.like-themes.com/wp-content/uploads/2018/02/main_ABOUT_BIG.jpg"
+              src="./images/main-ABOUT-BIG.jpg"
               class="img-fluid"
             />
           </div>
@@ -447,31 +447,90 @@
         document.getElementById("imageModal").style.display = "none";
       }
 
+      // function openVideoModal(videoSrc) {
+      //   var modal = document.getElementById("videoModal");
+      //   var video = document.getElementById("modalVideo");
+
+      //   // Set the video source
+      //   video.setAttribute("src", videoSrc);
+      //   video.load(); // Reload video to ensure the source updates
+      //   video.play(); // Play the video automatically
+
+      //   // Show the modal
+      //   modal.style.display = "flex";
+      // }
+
+      // function closeVideoModal() {
+      //   var modal = document.getElementById("videoModal");
+      //   var video = document.getElementById("modalVideo");
+
+      //   // Pause the video and reset the source
+      //   video.pause();
+      //   video.currentTime = 0; // Reset the video to the start
+      //   video.removeAttribute("src"); // Clear the source (optional but good practice)
+
+      //   // Hide the modal
+      //   modal.style.display = "none";
+      // }
+
+
       function openVideoModal(videoSrc) {
-        var modal = document.getElementById("videoModal");
-        var video = document.getElementById("modalVideo");
+    var modal = document.getElementById("videoModal");
+    var video = document.getElementById("modalVideo");
 
-        // Set the video source
-        video.setAttribute("src", videoSrc);
-        video.load(); // Reload video to ensure the source updates
-        video.play(); // Play the video automatically
+    // Pause all other videos on the page (fixes background video issue)
+    let allVideos = document.querySelectorAll("video");
+    allVideos.forEach(v => {
+        if (v !== video) { // Don't pause the modal video itself
+            v.pause();
+        }
+    });
 
-        // Show the modal
-        modal.style.display = "flex";
-      }
+    // Set the video source and play
+    video.setAttribute("src", videoSrc);
+    video.load(); // Ensure the source updates
+    video.play(); // Play the modal video
 
-      function closeVideoModal() {
-        var modal = document.getElementById("videoModal");
-        var video = document.getElementById("modalVideo");
+    // Show the modal
+    modal.style.display = "flex";
+}
 
-        // Pause the video and reset the source
+function closeVideoModal() {
+    var modal = document.getElementById("videoModal");
+    var video = document.getElementById("modalVideo");
+
+    // Pause the modal video and reset it
+    video.pause();
+    video.currentTime = 0; // Reset to start
+    video.removeAttribute("src"); // Clear the source (optional)
+
+    // Hide the modal
+    modal.style.display = "none";
+}
+
+// Attach event listener for closing modal (if there's a cancel button)
+document.getElementById("closeButton").addEventListener("click", closeVideoModal);
+
+
+      document.getElementById('modalCancelButton').addEventListener('click', function() {
+    let video = document.querySelector('#yourModal video');
+    if (video) {
+        video.pause();  // Pause the video
+        video.currentTime = 0;  // Reset the video to the start
+    }
+  });
+
+  document.getElementById('openModalButton').addEventListener('click', function() {
+    let allVideos = document.querySelectorAll('video');
+    allVideos.forEach(video => {
         video.pause();
-        video.currentTime = 0; // Reset the video to the start
-        video.removeAttribute("src"); // Clear the source (optional but good practice)
+    });
 
-        // Hide the modal
-        modal.style.display = "none";
-      }
+    let modalVideo = document.querySelector('#yourModal video');
+    if (modalVideo) {
+        modalVideo.play();
+    }
+});
 
       // document.addEventListener("DOMContentLoaded", function () {
       //   emailjs.init("5sA71Sok179SXMxG0"); // Replace with your EmailJS Public Key
@@ -541,8 +600,8 @@
 
             emailjs
               .send(
-                "service_7wb92d6",
-                "template_gw3qi9k",
+                "service_vfvaydo",
+                "template_lmpz009",
                 {
                   name: document.getElementById("name").value,
                   email: document.getElementById("email").value,
