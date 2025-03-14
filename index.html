@@ -447,33 +447,6 @@
         document.getElementById("imageModal").style.display = "none";
       }
 
-      // function openVideoModal(videoSrc) {
-      //   var modal = document.getElementById("videoModal");
-      //   var video = document.getElementById("modalVideo");
-
-      //   // Set the video source
-      //   video.setAttribute("src", videoSrc);
-      //   video.load(); // Reload video to ensure the source updates
-      //   video.play(); // Play the video automatically
-
-      //   // Show the modal
-      //   modal.style.display = "flex";
-      // }
-
-      // function closeVideoModal() {
-      //   var modal = document.getElementById("videoModal");
-      //   var video = document.getElementById("modalVideo");
-
-      //   // Pause the video and reset the source
-      //   video.pause();
-      //   video.currentTime = 0; // Reset the video to the start
-      //   video.removeAttribute("src"); // Clear the source (optional but good practice)
-
-      //   // Hide the modal
-      //   modal.style.display = "none";
-      // }
-
-
       function openVideoModal(videoSrc) {
     var modal = document.getElementById("videoModal");
     var video = document.getElementById("modalVideo");
@@ -530,53 +503,7 @@ document.getElementById("closeButton").addEventListener("click", closeVideoModal
     if (modalVideo) {
         modalVideo.play();
     }
-});
-
-      // document.addEventListener("DOMContentLoaded", function () {
-      //   emailjs.init("5sA71Sok179SXMxG0"); // Replace with your EmailJS Public Key
-      //   console.log("init");
-      //   document
-      //     .getElementById("contact-form")
-      //     .addEventListener("submit", function (event) {
-      //       event.preventDefault();
-      //       console.log("submit pressed");
-
-      //       let name = document.getElementById("name").value;
-      //       let email = document.getElementById("email").value;
-      //       let mobile = document.getElementById("mobile").value;
-      //       let comments = document.getElementById("comments").value;
-
-      //       let templateParams = {
-      //         name: name,
-      //         email: email,
-      //         mobile: mobile,
-      //         comments: comments,
-      //       };
-
-      //       emailjs
-      //         .send(
-      //           "service_7wb92d6",
-      //           "template_gw3qi9k",
-      //           {
-      //             name: document.getElementById("name").value,
-      //             email: document.getElementById("email").value,
-      //             mobile: document.getElementById("mobile").value,
-      //             comments: document.getElementById("comments").value,
-      //           },
-      //           "5sA71Sok179SXMxG0"
-      //         )
-      //         .then((response) => {
-      //           console.log("Email sent successfully!", response);
-      //         })
-      //         .catch((error) => {
-      //           console.error("Email sending failed:", error);
-      //         });
-
-      //       // Clear form after sending
-      //       document.getElementById("contact-form").reset();
-      //     });
-      // });
-
+  });
             function submitForm() {
               emailjs.init("5sA71Sok179SXMxG0"); // Replace with your EmailJS Public Key
         console.log("init");
@@ -611,16 +538,21 @@ document.getElementById("closeButton").addEventListener("click", closeVideoModal
                 "5sA71Sok179SXMxG0"
               )
               .then((response) => {
-                console.log("Email sent successfully!", response);
-              })
+                console.log("Email sent successfully!", response);})
               .catch((error) => {
                 console.error("Email sending failed:", error);
               });
 
             // Clear form after sending
             document.getElementById("contact-form").reset();
+
+
+             // Show alert after a short delay
+             setTimeout(() => {
+                        alert("Thank you for reaching out to us!");
+                    }, 100);
             }
-          )}
+        )}
     </script>
   </body>
 </html>
